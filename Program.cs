@@ -13,6 +13,9 @@ namespace TP02
             int randomed = new Random().Next(49) + 1; // nombre Aléatoire
             int numberTry = 0;
             bool find = false;
+            Console.SetCursorPosition(20,1);
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine("Saisissez un nombre entre 1 et 50 :");
             while (!find)
             {
@@ -25,9 +28,17 @@ namespace TP02
                     else
                     {
                         if (pickedValue < randomed)
+                        {
+                            //Console.Clear();
+                            //Console.WriteLine("Saisissez un nombre entre 1 et 50 :");
                             Console.WriteLine("Trop petit ...");
+                        }
                         else
+                        {
+                            //Console.Clear();
+                            //Console.WriteLine("Saisissez un nombre entre 1 et 50 :");
                             Console.WriteLine("Trop grand ...");
+                        }
                     }
                     numberTry++;
                 }
